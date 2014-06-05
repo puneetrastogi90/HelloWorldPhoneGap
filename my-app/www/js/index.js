@@ -58,16 +58,18 @@ var app = {
 
 
 function GetAllImageFromSD() {
-	alert("GetAllImageFromSD");
+	
     window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, onFileSystemSuccess, fail);
 
 }
 
 function onFileSystemSuccess(fileSystem) {
+	alert("onFileSystemSuccess");
     fileSystem.root.getDirectory("/sdcard", { create: false, exclusive: false }, getDirSuccess, fail);
 }
 
 function getDirSuccess(dirEntry) {
+alert("getDirSuccess");
     var directoryReader = dirEntry.createReader();
 
     // Get a list of all the entries in the directory
@@ -78,6 +80,7 @@ function getDirSuccess(dirEntry) {
 var readerTimeout = null, millisecondsBetweenReadSuccess = 1000;
 
 function readerSuccess(entries) {
+	alert("readerSuccess");
     String.prototype.startsWith = function (str)
     { return (this.match("^" + str) == str) }
 
