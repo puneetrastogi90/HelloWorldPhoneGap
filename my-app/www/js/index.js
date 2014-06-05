@@ -19,7 +19,6 @@
 var app = {
     // Application Constructor
     initialize: function() {
-        initialize : function() {
             navigator.notification.alert('inside initialize', // message
             function() {
             }, // callback
