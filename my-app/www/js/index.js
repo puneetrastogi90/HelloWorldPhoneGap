@@ -18,8 +18,8 @@
  */
 var app = {
     // Application Constructor
-    initialize: function() {
-    	navigator.notification.alert(
+    initialize: function () {
+    	navigator.notification.alert (
                 'inside initialize',  // message
                 function(){},         // callback
                 'title',            // title
@@ -43,32 +43,35 @@ var app = {
         app.receivedEvent('deviceready');
     },
     // Update DOM on a Received Event
-    receivedEvent: function() {
-       /* var parentElement = document.getElementById(id);
-        var listeningElement = parentElement.querySelector('.listening');
-        var receivedElement = parentElement.querySelector('.received');
-
-        listeningElement.setAttribute('style', 'display:none;');
-        receivedElement.setAttribute('style', 'display:block;');
-
-        console.log('Received Event: ' + id);*/
+    receivedEvent: function(id) {
+       /*
+		 * var parentElement = document.getElementById(id); var listeningElement =
+		 * parentElement.querySelector('.listening'); var receivedElement =
+		 * parentElement.querySelector('.received');
+		 * 
+		 * listeningElement.setAttribute('style', 'display:none;');
+		 * receivedElement.setAttribute('style', 'display:block;');
+		 * 
+		 * console.log('Received Event: ' + id);
+		 */
+    	
+    	
     	
     	navigator.notification.alert(
                 'inside received event',  // message
                 function(){},         // callback
-                'title',            // title
+                id,            // title
                 'ok'                  // buttonName
             );
-    	getFileSystem();
-    	showImage();
+    	app.getFileSystem();
+    	app.showImage();
     	var numDirs = 0;
     	var numFiles = 0;
     	var ImageFilePath = new Array();
-    	
-    	GetAllImageFromSD();
+    	app.getAllImageFromSD();
     	
     }
-    function GetAllImageFromSD() {
+    getAllImageFromSD: function () {
     	navigator.notification.alert(
                 'inside GetAllImageFromSD',  // message
                 function(){},         // callback
@@ -117,7 +120,7 @@ var app = {
                     if (!fileName.startsWith(".")) {
                         numFiles++;
                         ImageFilePath.push(entries[i].fullPath)
-                        //  console.log("file "+entries[i].fullPath)
+                        // console.log("file "+entries[i].fullPath)
                     }
                 }
 
