@@ -44,29 +44,29 @@ var app = {
 	},
 	// Update DOM on a Received Event
 	receivedEvent : function(id) {
-		/*
-		 * var parentElement = document.getElementById(id); var listeningElement =
-		 * parentElement.querySelector('.listening'); var receivedElement =
-		 * parentElement.querySelector('.received');
-		 * 
-		 * listeningElement.setAttribute('style', 'display:none;');
-		 * receivedElement.setAttribute('style', 'display:block;');
-		 * 
-		 * console.log('Received Event: ' + id);
-		 */
+		
+		  var parentElement = document.getElementById(id); var listeningElement =
+		  parentElement.querySelector('.listening'); var receivedElement =
+		  parentElement.querySelector('.received');
+		  
+		  listeningElement.setAttribute('style', 'display:none;');
+		  receivedElement.setAttribute('style', 'display:block;');
+		  
+		  console.log('Received Event: ' + id);
+		 
 
-		navigator.notification.alert('inside received event', // message
-		function() {
-		}, // callback
-		id, // title
-		'ok' // buttonName
-		);
-		app.getFileSystem();
-		app.showImage();
-		// var numDirs = 0;
-		// var numFiles = 0;
-		// var ImageFilePath = new Array();
-		getAllImageFromSD();
+//		navigator.notification.alert('inside received event', // message
+//		function() {
+//		}, // callback
+//		id, // title
+//		'ok' // buttonName
+//		);
+//		app.getFileSystem();
+//		app.showImage();
+//		// var numDirs = 0;
+//		// var numFiles = 0;
+//		// var ImageFilePath = new Array();
+//		getAllImageFromSD();
 
 	}
 
