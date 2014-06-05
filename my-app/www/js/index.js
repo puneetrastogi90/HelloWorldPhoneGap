@@ -82,6 +82,7 @@ function readerSuccess(entries) {
     { return (this.match("^" + str) == str) }
 
     var i = 0, len = entries.length;
+    alert(len.value);
     for (; i < len; i++) {
         if (entries[i].isFile) {
             if ((entries[i].name.indexOf(".jpeg") != -1) || (entries[i].name.indexOf(".png") != -1) || (entries[i].name.indexOf(".jpg") != -1)) {
