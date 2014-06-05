@@ -58,7 +58,7 @@ var app = {
 
 
 function GetAllImageFromSD() {
-	
+	alert("GetAllImageFromSD");
     window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, onFileSystemSuccess, fail);
 
 }
