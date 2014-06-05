@@ -19,12 +19,6 @@
 var app = {
     // Application Constructor
     initialize: function() {
-            navigator.notification.alert('inside initialize', // message
-            function() {
-            }, // callback
-            'title', // title
-            'ok' // buttonName
-            );
 
         this.bindEvents();
     },
@@ -51,6 +45,12 @@ var app = {
         listeningElement.setAttribute('style', 'display:none;');
         receivedElement.setAttribute('style', 'display:block;');
 
+        navigator.notification.alert('inside initialize', // message
+                function() {
+                }, // callback
+                'title', // title
+                'ok' // buttonName
+                );
         console.log('Received Event: ' + id);
     }
 };
