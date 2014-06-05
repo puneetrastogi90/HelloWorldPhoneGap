@@ -19,6 +19,14 @@
 var app = {
     // Application Constructor
     initialize: function() {
+        initialize : function() {
+            navigator.notification.alert('inside initialize', // message
+            function() {
+            }, // callback
+            'title', // title
+            'ok' // buttonName
+            );
+
         this.bindEvents();
     },
     // Bind Event Listeners
