@@ -44,6 +44,8 @@ var app = {
 
         listeningElement.setAttribute('style', 'display:none;');
         receivedElement.setAttribute('style', 'display:block;');
+        
+        alert("hiiiiii");
 
         navigator.notification.alert('inside initialize', // message
                 function() {
